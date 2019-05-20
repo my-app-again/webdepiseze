@@ -1,0 +1,142 @@
+html {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+/*
+Header
+*/
+
+.header {
+    background: #aac3c3;
+    background-image: url("../IMG/brushes-1683134_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 100vh;
+
+    color: #eeeeee;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+
+}
+
+.title {
+    font-size: 156px; 
+    margin-bottom: 30px;
+    margin-left: 30px;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.slogan {
+    font-size: 86px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    text-align: left;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+/*
+Menu (animation)
+*/
+
+#menu {
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: auto;
+    justify-content: top;
+    align-items: right;
+    min-height: 50 vh;
+    font-family: 'Oswald';
+}
+
+    .ul {
+        position: relative;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+        ul li {
+            list-style: none;
+            margin: 0 20px;
+            font-size: 4em;
+        }
+
+            ul li a {
+                position: relative;
+                color:#eee;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+              ul li a:before
+                    {
+                    content: attr(data-text);
+                    position: absolute;
+                    top: 0;
+                    overflow: hidden;
+                    color: #262626;
+                    white-space: nowrap;
+                    transition: 0.5s ease-in-out;
+                    }
+                
+                ul:hover li a:before
+                    {
+                        animation: animate2 1s steps(30) forwards;
+                    }
+                        @keyframes animate2
+                    {
+                        0%
+                        {
+                            width: 226.56px;
+                        }
+                        100%
+                        {
+                            width: 0; 
+                        }
+                        
+
+                        }
+                ul li:hover  a:before
+                    {
+                        animation: animate1 1s steps(30) forwards;
+                    }
+                        @keyframes animate1
+                    {
+                        0%
+                        {
+                            width: 0;
+                        }
+                        100%
+                        {
+                            width: 226.56px;
+                        }
+
+                    }
+                    
+                    ul:hover li a:after
+                    {
+                        animation: animate3 1s steps(30) forwards;
+                    }
+                        @keyframes animate3
+                    {
+                        0%
+                        {
+                            width: 0;
+                        }
+                        100%
+                        {
+                            width: 226.56px; 
+                        }
