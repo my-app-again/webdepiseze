@@ -8,6 +8,7 @@ html {
 Header
 */
 
+
 .header {
     background: #aac3c3;
     background-image: url("../IMG/brushes-1683134_1920.jpg");
@@ -15,7 +16,8 @@ Header
     background-position: center;
     background-size: cover;
 
-    height: 100vh;
+    height: 110vh;
+    width:100%;
 
     color: #eeeeee;
     text-align: left;
@@ -24,6 +26,7 @@ Header
     flex-direction: column;
     align-items: left;
     justify-content: left;
+    clear:both;
 
 }
 
@@ -33,6 +36,7 @@ Header
     margin-left: 30px;
     text-align: left;
     font-family: 'Oswald', sans-serif;
+    clear:both;
 
 }
 
@@ -42,6 +46,7 @@ Header
     margin-left: 30px;
     text-align: left;
     font-family: 'Fjalla One', sans-serif;
+    clear:both;
 }
 
 
@@ -49,15 +54,14 @@ Header
 Menu (animation)
 */
 
-#menu {
-    background-color: #eee;
+.menu {
     margin: 0;
     padding: 0;
     display: flex;
     width: auto;
     justify-content: top;
     align-items: right;
-    min-height: 50 vh;
+    min-height: 10 vh;
     font-family: 'Oswald';
 }
 
@@ -71,7 +75,7 @@ Menu (animation)
         ul li {
             list-style: none;
             margin: 0 20px;
-            font-size: 4em;
+            font-size: 3em;
         }
 
             ul li a {
@@ -92,45 +96,11 @@ Menu (animation)
                     transition: 0.5s ease-in-out;
                     }
                 
-                ul:hover li a:before
+                    ul:not(:hover) li a:before
                     {
-                        animation: animate2 1s steps(30) forwards;
+                        animation: animate2 0.5s steps(30) forwards;
                     }
-                        @keyframes animate2
-                    {
-                        0%
-                        {
-                            width: 226.56px;
-                        }
-                        100%
-                        {
-                            width: 0; 
-                        }
-                        
-
-                        }
-                ul li:hover  a:before
-                    {
-                        animation: animate1 1s steps(30) forwards;
-                    }
-                        @keyframes animate1
-                    {
-                        0%
-                        {
-                            width: 0;
-                        }
-                        100%
-                        {
-                            width: 226.56px;
-                        }
-
-                    }
-                    
-                    ul:hover li a:after
-                    {
-                        animation: animate3 1s steps(30) forwards;
-                    }
-                        @keyframes animate3
+                    @keyframes animate2
                     {
                         0%
                         {
@@ -140,3 +110,42 @@ Menu (animation)
                         {
                             width: 226.56px; 
                         }
+                    }
+                    
+                    ul:hover li a:before
+                    {
+                        animation: animate1 0.5s steps(30) forwards;
+                    }
+                    
+                    @keyframes animate1
+                    {
+                        0%
+                        {
+                            width: 226.56px;
+                        }
+                        100%
+                        {
+                            width: 0; 
+                        }
+                    }
+                    
+                    ul li:hover  a:before
+                    {
+                        animation: animate3 0.5s steps(30) forwards;
+                    }
+                    
+                    @keyframes animate3
+                    {
+                        0%
+                        {
+                            width: 0;
+                        }
+                        100%
+                        {
+                             width: 226.56px;
+                        }
+                    
+                    }
+/*
+Scrollbar
+*/
